@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["polars_core"] = [{"text":"impl <a class=\"trait\" href=\"lazy_static/trait.LazyStatic.html\" title=\"trait lazy_static::LazyStatic\">LazyStatic</a> for <a class=\"struct\" href=\"polars_core/struct.POOL.html\" title=\"struct polars_core::POOL\">POOL</a>","synthetic":false,"types":["polars_core::POOL"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

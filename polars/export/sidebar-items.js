@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["arrow","Welcome to arrow2’s documentation. Thanks for checking it out!"],["chrono","Chrono: Date and Time for Rust"],["lazy_static","A macro for declaring lazily evaluated statics."],["rayon","Data-parallelism library that makes it easy to convert sequential computations into parallel"]]});
