@@ -3897,6 +3897,7 @@ dependencies = [
  "once_cell",
  "polars",
  "polars-arrow",
+ "polars-config",
  "polars-core",
  "polars-error",
  "polars-ffi",
