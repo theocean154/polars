@@ -219,17 +219,21 @@ can add it to `.git/info/exclude` to ignore it locally without affecting the rep
 ```python
 import subprocess
 import sys
+import importlib
 
 # Try to build Polars. Skip this commit if the build fails.
 build = subprocess.run(["make", "build"])
 if build.returncode != 0:
-    sys.exit(125)  # tell git bisect to skip this commit
+    sys.exit(125)  # Tell git bisect to skip this commit.
+
+importlib.invalidate_caches()  # Ensure we see newly built package.
+
 
 import polars as pl
 
 # Your MRE here.
 # If Python exits with an unhandled exception, git bisect treats it as a bad commit.
-# If it exits normally (no exception, no sys.exit), it is treated as a good commit.
+# If it exits normally (giving exit code 0), it is treated as a good commit.
 # Example:
 # result = pl.Series([1, 2, 3]).some_method()
 # assert result == expected, f"Got {result}"
